@@ -1,5 +1,5 @@
 body {
-	height: ;
+	
 	background-color: hsl(180, 100%, 97%);
 	color: hsl(0, 0%, 0%);
 	font-family:avenir,sans-serif;
@@ -33,6 +33,12 @@ img {
 	margin: 1%;
 }
 
+#screenshot {
+	min-width: 110%;
+	height: auto;
+}
+
+
 article{
 	display:flex;
 	flex-direction:row;
@@ -46,7 +52,13 @@ a{
 	font-family: avenir,sans-serif;
   }
   
-  a:hover{
+a:hover{
 	color:hsl(0, 0%, 0%);
 	text-decoration: underline;
   }
+
+aside{
+	display:flex;
+	flex-direction: flex-end;
+
+}

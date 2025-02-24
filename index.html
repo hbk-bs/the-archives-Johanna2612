@@ -22,7 +22,7 @@
        <main>
 		<div class="container">
 			<header><h3>Die Algorithmen</h3></header>
-			Mit den Algorithmen haben wir eine analoge Art des Codierens kennengelernt. Nur mit Hilfe eine beschreibenden Anweisung sollten verschiedene Personen ein Bild konstruieren. Dabei sind verschiedene Umsetzungen der Beschreibung herausgekommen. Durch Veränderungen und Anpassungen der Formulierungen konnten die analogen Codes von fremder Hand so ausgeführt werden, wie es der Autor vorgesehen hat. Diese praktische Veranschaulichung erklärt die grundlegende Funktionsweise vom Programmieren und Codieren. Für mich hat es den Einstieg in die Thematik verständlicher gemacht: Man programmiert einen Grund-Code, der von einem Programm übersetzt wird und überarbeitet ihn dann, bis er den eigenen Wünschen entspricht.
+			Mit den Algorithmen haben wir eine analoge Art des Codierens kennengelernt. Nur mithilfe eine beschreibenden Anweisung sollten verschiedene Personen ein Bild konstruieren. Dabei sind verschiedene Umsetzungen der Beschreibung herausgekommen. Durch Veränderungen und Anpassungen der Formulierungen konnten die analogen Codes von fremder Hand so ausgeführt werden, wie es der Autor vorgesehen hat. Diese praktische Veranschaulichung erklärt die grundlegende Funktionsweise vom Programmieren und Codieren. Für mich hat es den Einstieg in die Thematik verständlicher gemacht: Man programmiert einen Grund-Code, der von einem Programm übersetzt wird und überarbeitet ihn dann, bis er den eigenen Wünschen entspricht. Ich habe meinen analogen "Code" drei mal optimiert, um ein möglichst präzises Ergebnis zu erhalten. 
 			<h4>Erster Algorithmus:</h4>"Male einen roten Kreis und verbinde in mit zwei parallellaufenden 
 				Linien. Umfasse das 
 				Gebilde mit nicht geraden Linien."
@@ -57,21 +57,17 @@
 		
 		</div>
 
-		<div class="container">
+		<div class="flex-item">
 			<header><h3>HTML und CSS Basics</h3></header>
 			Nachdem wir mit den analogen Algorithmen abgeschlossen hatten, haben wir uns mit den Basics von html und css beschäftigt. Am Anfang war es sehr überfordernd die Programmiersprache zu verstehen und sie richtig anzuwenden. Bis heute ist das Coden im html schwierig für mich, da es so viele Funktionen und Features enthält und man schnell den Überblick verliert. Allerdings habe ich durch Tutorials das erworbene Wissen festigen können und habe als Übung einer Website erstellt. Dabei ist aufgefallen: Coden ist nicht leicht, aber es macht Spaß, wenn man Gelerntes einbringen kann und der Code funktioniert.  
+			<p>
+			<aside>Bitte bedenke: Der Code ist mit Absicht unvollendet. Er dient nur als Übung und soll den Lernprozess verdeutlichen. Daher ist er nicht perfekt ausgearbeitet.</aside>
+			<img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/Bildschirmfoto%202025-02-12%20um%2015.43.00.png" alt="ducksite">
+			</p>
 			<a href="https://codepen.io/Johanna2612/pen/wvVPBgQ">click here for codepen</a>
-		</div>
-
-		<div class="website-preview">
-			<a href="https://codepen.io/Johanna2612/pen/wvVPBgQ" target="_blank">
-				<img src="assets/images/Bildschirmfoto 2025-02-12 um 15.43.00.png" alt="Vorschau der Website" width="300">
-			</a>
-			<a class="button" href="https://codepen.io/Johanna2612/pen/wvVPBgQ" target="_blank">Zur Website</a>
+				
 		</div>
 		
-
-
 
 		<p>
 		<div class="flex-item">
@@ -108,11 +104,40 @@
 					alt="extreme long shot">
 				<figcaption>Perspective "extreme long shot"<p><a href="https://codepen.io/Johanna2612/pen/mdNxOaz?editors=0010">click here for codepen</a></p></figcaption>
 				</figure>
-
 			</article>
 		</div>
 		</p>	
 
+		
+			<div class ="container">
+				<header>
+					<h3>Interaction</h3>
+				</header>
+				<p>
+					In diesem Thema haben wir uns damit beschäftig, wie man eine Person aktiv mithilfe von Code beschäftigen kann. Im "useless web" probierten wir verschiedene Interaktionen aus (z.B. in Form von Spielen) und sammelten Inspirationen für unser eigenes Projekt. Die Herausforderung bestand darin, eine Interaktion zu codieren, die nicht zu einfach und trotzdem codierbar ist. Dabei sollte es zudem etwas sein, was keinen Zweck erfüllt und in seiner Funktion sinnlos ist. 
+				</p>
+				<img id= "screenshot"
+				src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/Bildschirmfoto%202025-02-24%20um%2012.53.28.png" alt="">
+				<p>
+					Bei der Ideenfindung für das Projekt habe ich meine ersten Gedanken und Konzepte aufgeschrieben und bewertet (siehe oben). Schließlich entschied ich mich für eine Fusion zweier Ideen: Aus der Überlegung mit den Luftballons und aus der Idee mit den Schneeflocken habe ich ein Winter-Spiel codiert. Dabei kann man Schneeflocken, die vom oberen Bildrand fallen, per Mausklick fangen. 
+				</p>
+				<img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/Bildschirmfoto%202025-02-24%20um%2015.55.03.png" alt="">
+				<figcaption><a href="https://codepen.io/Johanna2612/pen/qEWBBQZ?editors=1100">click here for codepen</a></figcaption>
+				<p>
+					Um das Grundgerüst des Codes aufzubauen, codierte ich eine Funktion für die Erstellung von Schneeflocken, die im Array "flakes" gespeichert werden, und fügte dann die variablen Werte, wie die Fallgeschwindigkeit, die Größe und die Dichte der Schneeflocken hinzu. Das Experimentieren mit diesen Zahlen war in diesem Fall entscheidend, da das Spiel nicht zu leicht werden sollte. Mit der Funktion "checkClick ( )" wird geprüft, ob eine Schneeflocke angeklickt wurde. Wenn dies zutrifft, wird sie aus dem Array entfernt und verschwindet auf dem Bildschirm. Um das Spiel ansprechender zu gestalten, probierte ich, einen Zähler für die gefangenen und verpassten Schneeflocken zu erstellen. Dafür brauchte ich mehrere Anläufe. Ich fügte die Variablen "destroyedCount" und "missedCount" hinzu. Wenn eine Schneeflocke angeklickt oder verpasst wird, erhöht sich der jeweilige Zählertext durch die Funktion "updateCounter" um eins.
+				</p>
+			</div>
+		
+		<p>
+			<div class = "container">
+				<header>
+					<h3>Motion</h3>
+				</header>
+				<p>
+
+				</p>
+			</div>
+		</p>
 
 	</body>
 </html>
