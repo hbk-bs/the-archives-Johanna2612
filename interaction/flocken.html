@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  
+       
+       <div id="counter">Catched snowflakes: 0</div>
+       <div id="missedCounter">Missed snowflakes: 0</div>
+       <style>
+
+h1{
+  display:flex;
+  justify-content: center;
+  margin: 60px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 70px;
+  color: lightblue;
+}
+
+body {
+            margin: 0;
+            overflow: hidden;
+            background-color: hsl(210, 29%, 28%); 
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -70px;
+            pointer-events: none; 
+            color: white;
+            animation: fall linear infinite;
+        }
+      
+        @keyframes fall {
+            to {
+                transform: translateY(130vh); /* Schneeflocken verschwinden smooth beim unteren Bildrand */
+            }
+        }
+   
+      #counter {
+        position: fixed;
+        top: 620px;
+        left: 30px;
+        font-size: 24px;
+        color: hsl(210, 29%, 28%);
+        background-color: lightblue;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Gill Sans", sans-serif;
+      }
+      
+      #missedCounter {
+        position: fixed;
+        top: 690px;
+        left: 30px;
+        font-size: 24px;
+        color: hsl(210, 29%, 28%);
+        background-color: lightcoral;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Gill Sans", sans-serif;
+      }
+
+ 
+ 
+       </style>
+       <script>
+             
+             const flakes = [];
+             let destroyedCount = 0; //zähler für missed & catched snowflakes
+             let missedCount = 0;    
+     
+             
+             function createSnowflake() {
+                 const snowflake = document.createElement('div');
+                 snowflake.classList.add('snowflake');
+                 snowflake.innerText = '❄'; 
+                 
+                 const left = Math.random() * window.innerWidth; 
+                 const animationDuration = Math.random() * 8 + 10; // Geschwindigkeit zwischen 8 & 10 sekunden
+     
+                 snowflake.style.left = `${left}px`;
+                 snowflake.style.animationDuration = `${animationDuration}s`;
+     
+                 //Größe der Schneeflocke zwischen 50 & 60
+                 const size = Math.random() * 60 + 50;
+                 snowflake.style.fontSize = `${size}px`;
+     
+                 document.body.appendChild(snowflake);
+     
+                 flakes.push(snowflake);
+             }
+     
+             // Funktion für anklicken v. Schneeflocke
+             function checkClick(event) {
+                 flakes.forEach(flake => {
+                     const rect = flake.getBoundingClientRect();
+                     if (event.clientX >= rect.left && event.clientX <= rect.right &&
+                         event.clientY >= rect.top && event.clientY <= rect.bottom) {
+                       
+                         flake.remove();
+                         
+                         const index = flakes.indexOf(flake);
+                         if (index > -1) {
+                             flakes.splice(index, 1);
+                         }
+     
+                         // Zähler und Text aktualisieren
+                         destroyedCount++;
+                         updateCounters();
+                     }
+                 });
+             }
+     
+             // Funktion, um die Zähler zu aktualisieren
+             function updateCounters() {
+                 const counterElement = document.getElementById('counter');
+                 counterElement.textContent = `Catched snowflakes: ${destroyedCount}`;
+     
+                 const missedCounterElement = document.getElementById('missedCounter');
+                 missedCounterElement.textContent = `Missed snowflakes: ${missedCount}`;
+             }
+     
+             // Funktion, die überprüft, ob eine Schneeflocke den unteren Rand erreicht hat
+             function checkMissedFlakes() {
+                 flakes.forEach(flake => {
+                     const rect = flake.getBoundingClientRect();
+                     if (rect.top > window.innerHeight) {
+                         // Schneeflocke fliegt über Rand und wurde nicht gefangen
+                         flake.remove();
+     
+                         
+                         const index = flakes.indexOf(flake);
+                         if (index > -1) {
+                             flakes.splice(index, 1);
+                         }
+     
+                         // Zähler für missed snowflakes erhöhen
+                         missedCount++;
+                         updateCounters();
+                     }
+                 });
+             }
+     
+             
+             window.addEventListener('click', checkClick);
+     
+             // alle 800ms gibts eine neue Schneeflocke
+             setInterval(createSnowflake, 800);
+     
+             //Überprüfung alle 100ms, ob Schneeflocken den unteren Rand erreicht haben
+             setInterval(checkMissedFlakes, 100);
+           
+       </script>
+     
+     
+     <a href="code.html">Hier klicken für Code</a>
+       
+</body>
+</html>

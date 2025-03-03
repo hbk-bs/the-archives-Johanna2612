@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<title>{the archive}</title>
+		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+
+        <div class ="flex-item">
+            <header>
+                <h3>Interaction</h3>
+            </header>
+            <p>
+                Interaction – wie kann man eine Person aktiv mithilfe von Code beschäftigen? <br>Im "Useless Web" probierten wir verschiedene Interaktionen aus (z.B. in Form von Spielen) und sammelten Inspirationen für unser eigenes Projekt. Die Herausforderung bestand darin, eine Interaktion zu codieren, die nicht zu einfach und trotzdem umsetzbar ist. Zudem sollte sie keinen Zweck erfüllt und in ihrer Funktion sinnlos sein. 
+            </p>
+            <img id= "screenshot"
+            src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/Bildschirmfoto%202025-02-24%20um%2012.53.28.png" alt="">
+            <p>
+                Bei der Ideenfindung für das Projekt habe ich meine ersten Gedanken und Konzepte in einem Figma-Board notiert und bewertet (siehe oben). <br>Schließlich entschied ich mich für eine Fusion zweier Ideen: Aus der Überlegung mit den Luftballons und der Idee mit den Schneeflocken wollte ich ein Winter-Spiel programmieren. <br>Dabei soll man Schneeflocken, die vom oberen Bildrand fallen, per Mausklick fangen können. 
+            </p>
+            <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/Bildschirmfoto%202025-02-24%20um%2015.55.03.png" alt="">
+            <figcaption><a href="http://127.0.0.1:3000/interaction/flocken.html">Hier klicken für Interaction</a></figcaption>
+            <p>
+                Um das Grundgerüst des Codes aufzubauen, programmierte ich eine Funktion für die Erstellung von Schneeflocken, die im Array "flakes" gespeichert werden, und fügte dann die variablen Werte, wie die Fallgeschwindigkeit, die Größe und die Dichte der Schneeflocken hinzu. Das Experimentieren mit diesen Zahlen war in diesem Fall entscheidend, da das Spiel nicht zu leicht werden sollte. <br> Mit der Funktion <code>checkClick ( )</code> wird geprüft, ob eine Schneeflocke angeklickt wurde. Wenn dies zutrifft, wird sie aus dem Array entfernt und verschwindet auf dem Bildschirm. <br>Um das Spiel ansprechender zu gestalten, probierte ich, einen Zähler für die gefangenen und verpassten Schneeflocken zu erstellen. <br>Dafür brauchte ich mehrere Anläufe. Ich fügte die Variablen <code>destroyedCount</code> und <code>missedCount</code> hinzu. Wenn eine Schneeflocke angeklickt oder verpasst wird, erhöht sich der jeweilige Zählertext durch die Funktion <code>updateCounter</code> um eins. <p>Dafür, dass ich mit der Aufgabe am Anfang viele Schwierigkeiten hatte, bin ich überaus zufrieden mit dem Endergebnis. <br>Im Prozess ergaben sich auch einige Ideen, die ich aufgrund von Zeitmangel und fehlendem Wissen leider nicht eingearbeitet habe. <br>Beispielsweise habe ich versucht, eine kleine Schneelandschaft als Dekoration zu programmieren. Nach vielen Versuchen, diese Idee einzubringen, scheiterte sie an meinen Skills. Des Weiteren würde zu viel Dekoration vom Geschehen ablenken. <br>Als weitere Ausarbeitung kam mir eine „Game-over“- Funktion in den Sinn. Ich stellte mir dabei vor, wie der Schnee am unteren Bildschirmrand bei jeder verpassten Schneeflocke immer weiter steigt, sodass das Spielfeld immer kleiner wird. Nach zehn verpassten Schneeflocken wäre das Spiel vorbei, da der Schnee den oberen Rand erreicht hätte. Auch den Vorschlag verwarf ich aufgrund seiner Komplexität. <br>Etwas einfacher gestaltete sich der Gedanke, dass die Schneeflocken mit der Zeit immer schneller fallen. Dies habe ich zwischenzeitlich auch in meinem Code gehabt, jedoch machte es für mich keinen Sinn, die Geschwindigkeit zu erhöhen und gleichzeitig  keine „Game-over“-Funktion zu haben. Der Spieler hätte am Ende keine Chance mehr gehabt, die Schneeflocken zu fangen.</p>  
+
+            </p>
+        </div>
+   
+
+    </body>
+</html>
