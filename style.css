@@ -4,8 +4,8 @@ body {
 	color: hsl(0, 0%, 0%);
 	font-family:avenir,sans-serif;
 	font-size: 18px;
-	width: 100%;
-	margin: 0 auto;
+	width: 90%;
+	margin: 20px;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
@@ -14,12 +14,33 @@ body {
 }
 header {
 	background-color:hsl(182, 25%, 50%);
+	width: 100%;
 	font-size: 20px;
 	font-family: avenir;
 	margin: 5px;
 	padding: 5px;
-
+	border-radius: 12px;
 }
+
+button {
+	width: 30%;
+	background-color: hsl(180, 100%, 97%);
+	border: solid hsl(182, 25%, 50%); 
+	border-radius: 12px;
+	text-align: center;
+	margin: 5px;
+	padding: 10px;
+}
+
+.text-box {
+    border: 3px solid hsl(182, 25%, 50%); 
+    padding: 10px; /* Abstand zwischen Text und Rand */
+    display: inline-block; /* Damit die Umrandung nur so groß wie der Text ist */
+	border-radius: 12px;
+}
+
+
+
 
 .container {
 	margin: 5%;
@@ -60,7 +81,15 @@ img {
 
 #aside-1 { 
 	width: 60% ;
+	
 }	
+
+
+.aside-2 {
+    width: 60%;
+    padding: 10px;
+   
+}
 
 .codesection {
 	display: flex;
@@ -117,7 +146,6 @@ article {
 
 
 
-
 a{
 	color:hsl(182, 25%, 50%);
 	text-decoration: none;
@@ -127,8 +155,17 @@ a{
 
 a:hover{
 	color:hsl(0, 0%, 0%);
-	text-decoration: underline;
+	text-decoration: none;
   }
+
+
  
+button:hover {
+	background-color: hsl(182, 25%, 50%);
+	color: hsl(180, 100%, 97%);
+}
 
-
+button a {
+    color: inherit; /* Erbt die Button-Farbe */
+    text-decoration: none; /* Falls gewünscht, Link-Unterstreichung entfernen */
+}
