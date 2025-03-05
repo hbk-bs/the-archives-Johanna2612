@@ -3,7 +3,8 @@ body {
 	background-color: hsl(180, 100%, 97%);
 	color: hsl(0, 0%, 0%);
 	font-family:avenir,sans-serif;
-	font-size: 18px;
+	font-size: 19px;
+	width: 600px;
 	margin: 0;
 	padding: 50px;
 	display: flex;
