@@ -1,158 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-    <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../style.css">
+
+<body>
     
-</head>
- <h3>Code "Catch the snowflakes"</h3>
-<div class="text-code">
-   
-<pre>
-    <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+  
+
+    </head>
+    <h3>Code "Catch the snowflakes"</h3>
+    <div class="text-code">
     
-        &lt;h1&gt;Catch the snowflakes!&lt;/h1&gt;
-    
-        &lt;div id="counter"&gt;Catched snowflakes: 0&lt;/div&gt;
-        &lt;div id="missedCounter"&gt;Missed snowflakes: 0&lt;/div&gt;
-    
-        &lt;style&gt;
-        h1 {
-            display: flex;
-            justify-content: center;
-            margin: 60px;
-            font-family: "Gill Sans", sans-serif;
-            font-size: 70px;
-            color: lightblue;
-        }
-    
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: hsl(210, 29%, 28%);
-        }
-    
-        .snowflake {
-            position: absolute;
-            top: -70px;
-            pointer-events: none;
-            color: white;
-            animation: fall linear infinite;
-        }
-    
-        @keyframes fall {
-            to {
-                transform: translateY(130vh);
+    <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+            &lt;h1&gt;Catch the snowflakes!&lt;/h1&gt;
+        
+            &lt;div id="counter"&gt;Catched snowflakes: 0&lt;/div&gt;
+            &lt;div id="missedCounter"&gt;Missed snowflakes: 0&lt;/div&gt;
+        
+            &lt;style&gt;
+            h1 {
+                display: flex;
+                justify-content: center;
+                margin: 60px;
+                font-family: "Gill Sans", sans-serif;
+                font-size: 70px;
+                color: lightblue;
             }
-        }
-    
-        #counter {
-            position: fixed;
-            top: 620px;
-            left: 30px;
-            font-size: 24px;
-            color: hsl(210, 29%, 28%);
-            background-color: lightblue;
-            padding: 15px;
-            border-radius: 10px;
-            font-family: "Gill Sans", sans-serif;
-        }
-    
-        #missedCounter {
-            position: fixed;
-            top: 690px;
-            left: 30px;
-            font-size: 24px;
-            color: hsl(210, 29%, 28%);
-            background-color: lightcoral;
-            padding: 15px;
-            border-radius: 10px;
-            font-family: "Gill Sans", sans-serif;
-        }
-        &lt;/style&gt;
-    
-        &lt;script&gt;
-        const flakes = [];
-        let destroyedCount = 0;
-        let missedCount = 0;
-    
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.innerText = '❄';
-    
-            const left = Math.random() * window.innerWidth;
-            const animationDuration = Math.random() * 8 + 10;
-    
-            snowflake.style.left = `${left}px`;
-            snowflake.style.animationDuration = `${animationDuration}s`;
-    
-            const size = Math.random() * 60 + 50;
-            snowflake.style.fontSize = `${size}px`;
-    
-            document.body.appendChild(snowflake);
-            flakes.push(snowflake);
-        }
-    
-        function checkClick(event) {
-            flakes.forEach(flake => {
-                const rect = flake.getBoundingClientRect();
-                if (event.clientX >= rect.left && event.clientX <= rect.right &&
-                    event.clientY >= rect.top && event.clientY <= rect.bottom) {
-                    flake.remove();
-                    const index = flakes.indexOf(flake);
-                    if (index > -1) {
-                        flakes.splice(index, 1);
-                    }
-                    destroyedCount++;
-                    updateCounters();
+        
+            body {
+                margin: 0;
+                overflow: hidden;
+                background-color: hsl(210, 29%, 28%);
+            }
+        
+            .snowflake {
+                position: absolute;
+                top: -70px;
+                pointer-events: none;
+                color: white;
+                animation: fall linear infinite;
+            }
+        
+            @keyframes fall {
+                to {
+                    transform: translateY(130vh);
                 }
-            });
-        }
-    
-        function updateCounters() {
-            const counterElement = document.getElementById('counter');
-            counterElement.textContent = `Catched snowflakes: ${destroyedCount}`;
-    
-            const missedCounterElement = document.getElementById('missedCounter');
-            missedCounterElement.textContent = `Missed snowflakes: ${missedCount}`;
-        }
-    
-        function checkMissedFlakes() {
-            flakes.forEach(flake => {
-                const rect = flake.getBoundingClientRect();
-                if (rect.top > window.innerHeight) {
-                    flake.remove();
-                    const index = flakes.indexOf(flake);
-                    if (index > -1) {
-                        flakes.splice(index, 1);
+            }
+        
+            #counter {
+                position: fixed;
+                top: 620px;
+                left: 30px;
+                font-size: 24px;
+                color: hsl(210, 29%, 28%);
+                background-color: lightblue;
+                padding: 15px;
+                border-radius: 10px;
+                font-family: "Gill Sans", sans-serif;
+            }
+        
+            #missedCounter {
+                position: fixed;
+                top: 690px;
+                left: 30px;
+                font-size: 24px;
+                color: hsl(210, 29%, 28%);
+                background-color: lightcoral;
+                padding: 15px;
+                border-radius: 10px;
+                font-family: "Gill Sans", sans-serif;
+            }
+            &lt;/style&gt;
+        
+            &lt;script&gt;
+            const flakes = [];
+            let destroyedCount = 0;
+            let missedCount = 0;
+        
+            function createSnowflake() {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerText = '❄';
+        
+                const left = Math.random() * window.innerWidth;
+                const animationDuration = Math.random() * 8 + 10;
+        
+                snowflake.style.left = `${left}px`;
+                snowflake.style.animationDuration = `${animationDuration}s`;
+        
+                const size = Math.random() * 60 + 50;
+                snowflake.style.fontSize = `${size}px`;
+        
+                document.body.appendChild(snowflake);
+                flakes.push(snowflake);
+            }
+        
+            function checkClick(event) {
+                flakes.forEach(flake => {
+                    const rect = flake.getBoundingClientRect();
+                    if (event.clientX >= rect.left && event.clientX <= rect.right &&
+                        event.clientY >= rect.top && event.clientY <= rect.bottom) {
+                        flake.remove();
+                        const index = flakes.indexOf(flake);
+                        if (index > -1) {
+                            flakes.splice(index, 1);
+                        }
+                        destroyedCount++;
+                        updateCounters();
                     }
-                    missedCount++;
-                    updateCounters();
-                }
-            });
-        }
-    
-        window.addEventListener('click', checkClick);
-    
-        setInterval(createSnowflake, 800);
-        setInterval(checkMissedFlakes, 100);
-        &lt;/script&gt;
-    
+                });
+            }
+        
+            function updateCounters() {
+                const counterElement = document.getElementById('counter');
+                counterElement.textContent = `Catched snowflakes: ${destroyedCount}`;
+        
+                const missedCounterElement = document.getElementById('missedCounter');
+                missedCounterElement.textContent = `Missed snowflakes: ${missedCount}`;
+            }
+        
+            function checkMissedFlakes() {
+                flakes.forEach(flake => {
+                    const rect = flake.getBoundingClientRect();
+                    if (rect.top > window.innerHeight) {
+                        flake.remove();
+                        const index = flakes.indexOf(flake);
+                        if (index > -1) {
+                            flakes.splice(index, 1);
+                        }
+                        missedCount++;
+                        updateCounters();
+                    }
+                });
+            }
+        
+            window.addEventListener('click', checkClick);
+        
+            setInterval(createSnowflake, 800);
+            setInterval(checkMissedFlakes, 100);
+            &lt;/script&gt;
+        
 
-    
-    &lt;/body&gt;
-    &lt;/html&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
     </code></pre>
     </div>
+</body>  
+</html>
