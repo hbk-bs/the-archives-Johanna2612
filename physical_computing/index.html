@@ -53,25 +53,28 @@
             
 
             <p><h3>Der Code</h3>
-                <div class="codesection">
-                    <div class = "text">
-                        
-                
-                            Bei den ersten Zeilen handelt es sich um Definitionen. So werden die 30 LEDs am Pin 3 des Boards angeschlossen, wobei die Helligkeit der Lämpchen das Maximum von 255 betragen. Außerdem wird der LED-Typ beschrieben und die Farbkonstellationen definiert. <br>Der Term <code>CRGB leds [NUM_LEDS]</code> steht für ein Array, in der die LEDs gespeichert werden. Der Sensor ist auf Pin 2 zugeschaltet und übermittelt den Zustand <code>(pirState) „LOW“</code>. Das heißt, dass gerade keine Bewegung erkannt wurde. <br>Durch <code>val</code> wird dieser Zustand gespeichert. <br>Das <code>void setup()</code>startet die Kommunikation zwischen dem Arduino und dem Sensor, wobei Informationen, wie beispielsweise die Übertragungsgeschwindigkeit (9600) festgelegt werden. Des Weiteren werden Infos über die LED-Art, die verwendeten Pins und die Farb-Reihenfolge an die FastLED-Bibliothek weitergeleitet. <br>Als nächstes folgt die „void loop“-Funktion. Hier zeigt die Funktion entweder <Code>pirState == LOW</Code> oder <code>val == HIGH</code> an. Ändert sich der Zustand von LOW auf HIGH, wurde eine Bewegung auf dem Bewegungssensor erkannt und das folgende Lichtmuster wird abgespielt: Nacheinander laufen alle LEDs durch, wobei jede dritte Lampe blau und die anderen rot aufleuchten. Dies regelt der Ausdruck <code>leds[i] = (i % 3 == 2) ? CRGB (0, 0, 255) : CRGB (255, 0, 0)</code>. <br>Durch <code>delay(700)</code> leuchten die Lampen nacheinander auf. Wenn keine Bewegung mehr registriert wird, wird die Lichterkette mit einer Verzögerung von 2,5 Sekunden wieder dunkel. Der pirState wird auf „LOW“ gesetzt und der Kreislauf beginnt von vorne, wenn eine Bewegung erkannt wird. 
-                    </div>	
-                    <div class = "code">
-                        <button> <a href="blinkenlichten.html">Hier klicken für Code</a></button>
-                
-                    
-                
+                Bei den ersten Zeilen handelt es sich um Definitionen. So werden die 30 LEDs am Pin 3 des Boards angeschlossen, wobei die Helligkeit der Lämpchen das Maximum von 255 betragen. Außerdem wird der LED-Typ beschrieben und die Farbkonstellationen definiert. <br>Der Term <code>CRGB leds [NUM_LEDS]</code> steht für ein Array, in der die LEDs gespeichert werden. Der Sensor ist auf Pin 2 zugeschaltet und übermittelt den Zustand <code>(pirState) „LOW“</code>. Das heißt, dass gerade keine Bewegung erkannt wurde. <br>Durch <code>val</code> wird dieser Zustand gespeichert. <br>Das <code>void setup()</code>startet die Kommunikation zwischen dem Arduino und dem Sensor, wobei Informationen, wie beispielsweise die Übertragungsgeschwindigkeit (9600) festgelegt werden. Des Weiteren werden Infos über die LED-Art, die verwendeten Pins und die Farb-Reihenfolge an die FastLED-Bibliothek weitergeleitet. <br>Als nächstes folgt die „void loop“-Funktion. Hier zeigt die Funktion entweder <Code>pirState == LOW</Code> oder <code>val == HIGH</code> an. Ändert sich der Zustand von LOW auf HIGH, wurde eine Bewegung auf dem Bewegungssensor erkannt und das folgende Lichtmuster wird abgespielt: Nacheinander laufen alle LEDs durch, wobei jede dritte Lampe blau und die anderen rot aufleuchten. Dies regelt der Ausdruck <code>leds[i] = (i % 3 == 2) ? CRGB (0, 0, 255) : CRGB (255, 0, 0)</code>. <br>Durch <code>delay(700)</code> leuchten die Lampen nacheinander auf. Wenn keine Bewegung mehr registriert wird, wird die Lichterkette mit einer Verzögerung von 2,5 Sekunden wieder dunkel. Der pirState wird auf „LOW“ gesetzt und der Kreislauf beginnt von vorne, wenn eine Bewegung erkannt wird. 
+                <br>
+                <p>
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten30.png" alt="">
+                </p>
+                <div class = "code">
+                        <button id="button2"> 
+                            <a href="blinkenlichten.html">Hier klicken für Code</a>
+                        </button>
                 </div>
-                </div>
-                <img id= computer src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten1.png" alt="">
+
+                <div class = "code">
+                    <button id="button2"> 
+                        <a href="http://127.0.0.1:3000/physical_computing/video.html">Hier klicken für Videos</a>
+                    </button>
+            </div>
             </p>
             
         
 
             <p>
+            
                 <h3>Fertigstellung und Reflektion</h3>
                 Sobald der Code fertig geschrieben war und die Elektrik funktionierte, starteten wir einen Testlauf mit den Lichtern und überlegten, wie wir die Lichterkette taktisch klug unterbringen. <br>Die Sensoren wurden auf ein Dach am Anfang der jeweiligen Häuserreihe gesetzt und die Technik wurde im Inneren versteckt. <br>Da wir unglücklicherweise die Häuserteile schon zu Beginn aneinandergeklebt hatten, hatten wir Probleme die Lichterkette durch die Häuser zu ziehen. Deswegen schnitten wir als Verbindung kleine Durchgänge in die Wände der Häuser, was überaus aufwendig war. <br>Dennoch wurden wir rechtzeitig fertig und die kleine Stadt fügt sich sehr gut in die anderen Projekte ein. 
                 <p>
@@ -82,7 +85,7 @@
             </p>
             <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten9.png" alt="">
             <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten10.png" alt="">
-
+            <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten.png" alt="">
         </p>
     </div>
 </p>
