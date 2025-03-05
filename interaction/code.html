@@ -57,8 +57,7 @@
             }
         
             @keyframes fall {
-                to {
-                    transform: translateY(130vh);
+                to {transform: translateY(130vh);
                 }
             }
         
@@ -112,40 +111,43 @@
         
             function checkClick(event) {
                 flakes.forEach(flake => {
-                    const rect = flake.getBoundingClientRect();
-                    if (event.clientX >= rect.left && event.clientX <= rect.right &&
-                        event.clientY >= rect.top && event.clientY <= rect.bottom) {
-                        flake.remove();
-                        const index = flakes.indexOf(flake);
-                        if (index > -1) {
-                            flakes.splice(index, 1);
-                        }
-                        destroyedCount++;
-                        updateCounters();
-                    }
+                const rect = flake.getBoundingClientRect();
+                if (event.clientX >= rect.left && event.clientX <= rect.right &&
+                event.clientY >= rect.top && event.clientY <= rect.bottom) {
+                flake.remove();
+                const index = flakes.indexOf(flake);
+                if (index > -1) {
+                flakes.splice(index, 1);
+                }
+                destroyedCount++;
+                updateCounters();
+                }
                 });
             }
         
             function updateCounters() {
                 const counterElement = document.getElementById('counter');
-                counterElement.textContent = `Catched snowflakes: ${destroyedCount}`;
+                counterElement.textContent = `Catched snowflakes: 
+                ${destroyedCount}`;
         
-                const missedCounterElement = document.getElementById('missedCounter');
-                missedCounterElement.textContent = `Missed snowflakes: ${missedCount}`;
+                const missedCounterElement = 
+                document.getElementById('missedCounter');
+                missedCounterElement.textContent = 
+                `Missed snowflakes: ${missedCount}`;
             }
         
             function checkMissedFlakes() {
                 flakes.forEach(flake => {
-                    const rect = flake.getBoundingClientRect();
-                    if (rect.top > window.innerHeight) {
-                        flake.remove();
-                        const index = flakes.indexOf(flake);
-                        if (index > -1) {
-                            flakes.splice(index, 1);
-                        }
-                        missedCount++;
-                        updateCounters();
-                    }
+                const rect = flake.getBoundingClientRect();
+                if (rect.top > window.innerHeight) {
+                flake.remove();
+                const index = flakes.indexOf(flake);
+                if (index > -1) {
+                flakes.splice(index, 1);
+                }
+                missedCount++;
+                updateCounters();
+                }
                 });
             }
         

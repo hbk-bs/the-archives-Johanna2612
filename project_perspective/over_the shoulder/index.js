@@ -4,7 +4,7 @@
 function setup() {
 	// this is function scope
 	// setup is executed once
-	createCanvas(300, 300);
+	createCanvas(500, 500);
 	background(250, 167, 0);
 	strokeWeight(2);
 

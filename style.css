@@ -28,6 +28,7 @@ button {
 	border: solid hsl(182, 25%, 50%); 
 	border-radius: 12px;
 	text-align: center;
+	font-size: 15px;
 	margin: 5px;
 	padding: 10px;
 }
@@ -70,6 +71,11 @@ video {
 
 #screenshot {
 	max-width: 85%;
+	height: auto;
+}
+
+#duck {
+	width: 300px;
 	height: auto;
 }
 

@@ -5,7 +5,7 @@
 function setup() {
 	// this is function scope
 	// setup is executed once
-	createCanvas(400, 400);
+	createCanvas(500, 500);
 	//orange//
 	background(250, 167, 0);
 	strokeWeight(2);

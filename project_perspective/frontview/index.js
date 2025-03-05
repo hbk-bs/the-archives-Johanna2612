@@ -4,7 +4,7 @@
 function setup() {
 	// this is function scope
 	// setup is executed once
-	createCanvas(400, 400);
+	createCanvas(500, 500);
 	background(250, 167, 0); //orange//
 	const x = (n) => width * n;
 	const y = (n) => height * n;
