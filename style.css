@@ -5,14 +5,18 @@ body {
 	font-family:avenir,sans-serif;
 	font-size: 19px;
 	width: 80%;
-	margin-left: 40px;
-	margin-right: 40px;
+	margin: 0 auto;
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	max-width: 80ch;
+	overflow-x: hidden; 
+    
 }
+
+
 header {
 	background-color:hsl(182, 25%, 50%);
 	width: 100%;
@@ -21,6 +25,7 @@ header {
 	margin: 5px;
 	padding: 5px;
 	border-radius: 12px;
+	text-align: center;
 }
 
 button {
@@ -32,7 +37,25 @@ button {
 	font-size: 15px;
 	margin: 5px;
 	padding: 10px;
-	
+}
+
+footer {
+	padding: 10px   ;
+	color: hsl(182, 25%, 50%);
+ 	text-align: center;
+   	font-size: 15px;
+	width: 100%;
+}
+
+.footer {
+	position: absolute;
+    bottom: 5%;
+    left: 50%;
+	right: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
 
 #button2 {
@@ -174,15 +197,15 @@ article {
 
 a{
 	color:hsl(182, 25%, 50%);
-	text-decoration: none;
 	font-family: avenir,sans-serif;
-  }
+	text-decoration: none; 	
+}
   
 
 a:hover{
 	color:hsl(0, 0%, 0%);
 	text-decoration: none;
-  }
+}
 
 
  
