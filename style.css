@@ -5,8 +5,9 @@ body {
 	font-family:avenir,sans-serif;
 	font-size: 19px;
 	width: 80%;
-	margin: 0;
-	padding: 50px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,6 +32,7 @@ button {
 	font-size: 15px;
 	margin: 5px;
 	padding: 10px;
+	
 }
 
 #button2 {
@@ -84,7 +86,6 @@ video {
 	flex-direction: column;
 	gap: 15px;	
 }
-
 flex: 1;
 
 .flaschen {
