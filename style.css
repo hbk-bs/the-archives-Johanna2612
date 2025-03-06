@@ -1,3 +1,6 @@
+
+
+
 body {
 	
 	background-color: hsl(180, 100%, 97%);
@@ -30,7 +33,18 @@ header {
 
 button {
 	width: 30%;
-	background-color: hsl(180, 100%, 97%);
+	background-color: hsl(182, 25%, 50%);
+	border: solid hsl(182, 25%, 50%); 
+	border-radius: 12px;
+	text-align: center;
+	font-size: 15px;
+	margin: 5px;
+	padding: 10px;
+}
+
+#button2{
+	width: auto;
+	background-color: hsl(182, 25%, 50%);
 	border: solid hsl(182, 25%, 50%); 
 	border-radius: 12px;
 	text-align: center;
@@ -48,8 +62,8 @@ footer {
 }
 
 .footer {
-	position: absolute;
-    bottom: 5%;
+	position: relative;
+    bottom: auto;
     left: 50%;
 	right: 0;
     transform: translateX(-50%);
@@ -58,15 +72,6 @@ footer {
     padding: 10px;
 }
 
-#button2 {
-	background-color: hsl(182, 25%, 50%);
-	width: 80%;
-	font-size: 20px;
-	text-align: center;
-	margin: 5px;
-	padding: 10px;
-	color:  hsl(180, 100%, 97%);
-}
 
 .text-box {
     border: 3px solid hsl(182, 25%, 50%); 
@@ -196,9 +201,9 @@ article {
 
 
 a{
-	color:hsl(182, 25%, 50%);
+	color:hsl(180, 100%, 97%);;
 	font-family: avenir,sans-serif;
-	text-decoration: none; 	
+	text-decoration: none; 
 }
   
 
@@ -208,13 +213,4 @@ a:hover{
 }
 
 
- 
-button:hover {
-	background-color: hsl(182, 25%, 50%);
-	color: hsl(180, 100%, 97%);
-}
 
-button a {
-    color: inherit; /* Erbt die Button-Farbe */
-    text-decoration: none; /* Falls gewünscht, Link-Unterstreichung entfernen */
-}
