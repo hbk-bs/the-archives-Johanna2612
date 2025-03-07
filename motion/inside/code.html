@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<title>{the archive}</title>
+        <link rel="stylesheet" href="../../style.css">
+	</head>
+	<body>
+
+    <h3>Code "inside"</h3>
+    <div class="text-code">
+
+        <pre>
+            <code>
+
+            const radius = 100;
+            let angle = 0;
+                
+            function setup() {
+                const canvas = createCanvas(500, 500);
+                canvas.parent('sketch');
+                background('black');
+                angleMode(DEGREES);
+            }
+                
+            function draw() {
+                background("hsl(195, 53%, 79%)");
+                
+                push();
+                translate(width / 2, height / 2);
+                  
+                const x = radius * cos(angle);
+                const y = radius * sin(angle);
+                  
+                // Schwarzer Rand
+                stroke("black");
+                strokeWeight(0.6);
+                fill("hsl(39, 100%, 50%)"); 
+                circle(x, y, 300); 
+                
+                angle += 2;
+                pop();
+            }
+            </code>
+        </pre>
+    </div>
+
+    <p>
+        <button id="button2"><a href="http://127.0.0.1:3000/motion/inside/index.html">⬅︎ zurück</a>
+        </button>
+    </p>
+
+    <p>
+    <footer>Johanna Rohe | Grundlagen der digitalen Kommunikation | WS 24/25</footer>
+    </p>
+</body>
+</html>
