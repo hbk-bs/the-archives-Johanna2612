@@ -7,7 +7,7 @@ body{
   }
   
   h1{
-    color: orange; 
+    color: orange;
   }
   
   h2{
@@ -31,6 +31,15 @@ body{
     font-size:16px;
   }
   
+  #a2 {
+    color:hsl(180, 100%, 97%) ;
+    text-decoration: none;
+  }
+
+  #a2:hover{
+    color: black;
+  }
+
   header a:hover{
     color: brown;
   }
@@ -45,6 +54,18 @@ body{
     background-color:azure;
     font-size:15px;
     
+  }
+
+  #button2{
+    width: auto;
+    background-color: hsl(182, 25%, 50%);
+    color: hsl(180, 100%, 97%);
+    border: solid hsl(182, 25%, 50%); 
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+    padding: 10px;
   }
   
   aside{
