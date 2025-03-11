@@ -119,13 +119,14 @@ video {
 .dosen {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;	
-}flex: 1;
+	gap: 15px;
+	flex: 1;	
+}
 
 .flaschen {
 	display: flex;
 	flex-direction: column;
-	max-width: 100%;
+	width: 200px;
 	height: auto;
 }
 
