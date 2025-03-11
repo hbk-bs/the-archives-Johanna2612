@@ -73,9 +73,9 @@ footer {
 
 .text-box {
     border: 3px solid hsl(182, 25%, 50%); 
-    padding: 10px; /* Abstand zwischen Text und Rand */
-    display: inline-block; /* Damit die Umrandung nur so groß wie der Text ist */
-	border-radius: 12px;
+    padding: 10px; 
+    display: inline-block; 
+	border-radius: 
 }
 
 
@@ -93,7 +93,7 @@ img {
 
 
 video {
-	width: 600px;
+	width: 86%;
 	margin: 3%;
 	padding: 4%;
 }
@@ -165,16 +165,17 @@ video {
 .text-code {
 	background-color: hsl(182, 25%, 50%) ;
 	border-radius: 30px;
-	width: 600px;
+	width: 100%;
 	font-size: 12px;
 	padding: 5px;
-	
+	white-space: pre-wrap; /* Erhält das Code-Format, erlaubt aber Umbrüche */
+    word-wrap: break-word; 
 }
 
 .text-code2 {
 	background-color: hsl(182, 25%, 50%) ;
 	border-radius: 30px;
-	width: 700px;
+	width: 100%;
 	font-size: 12px;
 	padding: 5px;
 	
