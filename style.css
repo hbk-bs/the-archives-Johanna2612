@@ -51,6 +51,14 @@ button {
 	padding: 10px;
 }
 
+@media (max-width: 600px) {
+    button {
+        width: 100%; /* Button nimmt die volle Breite ein */
+        max-width: none; /* Keine Begrenzung der Breite */
+        display: block; /* Buttons untereinander statt nebeneinander */
+    }
+}
+
 footer {
 	padding: 10px   ;
 	color: hsl(182, 25%, 50%);
