@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<title>{the archive}</title>
+        <link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+
+
+        <div class = "flex-item">
+            <header>
+                <h3>
+                    Physical Computing 
+                </h3>
+            </header>
+            <button>
+                <a href="../algorithmen/algorithmus.html"> Algorithmen </a>
+            </button>
+    
+            <button>
+                <a href="../html & css/html_css.html"> HTML & CSS</a>
+            </button>
+            
+            <button>
+                <a href="../project_perspective/index.html">Project Perspective</a>
+            </button>
+    
+            <button>
+                <a href="../interaction/index.html">Interaction</a>
+            </button>
+    
+            <button>
+                <a href="../motion/index.html">Motion</a>
+            </button>
+    
+            <button>
+                <a href="../index.html">The archive</a>
+            </button>
+    
+            <p>
+                Der Abschnitt "Physical Computing" war für mich eine willkommene Abwechslung zum Codieren. <br>Die ersten Erfahrungen mit dem Löten haben mir besonders Spaß gemacht. Es war sehr hilfreich, dass man bei dieser Aufgabe physisch und mit den eigenen Händen arbeiten konnte und zum Schluss ein fertiges Endprodukt erhielt. Das hat den Einstieg und das Verständnis für die Elektrotechnik erleichtert, auch wenn das Thema nicht unbedingt zu meinen größten Stärken zählt. 
+                <p>
+                    <h3>Blinkenlichten</h3>
+                    Das Projekt "Blinkenlichten" wurde als großes Gruppenprojekt ausgelegt, wobei wir Arduino-Boards und LED-Lichterketten einarbeiten sollten. <br>Der Kurs teilte sich in verschiedene Gruppen auf, die jeweils eine Idee ausarbeiteten. Als Oberthema wählte der Kurs "Stadt und Straße" und es wurde sich darauf geeinigt, dass als Baumaterial neben den elektrotechnischen Grundmaterialien nur recycelte Materialien benutzt werden dürfen. <br>Des Weiteren sollte die Szene einem Alptraum ähneln, weshalb die Proportionen der Gegenstände bizarr verändert und vertauscht wurden. Die Licht-Farben wurden auf Rot, Blau und Weiß beschränkt, um die Einheitlichkeit zu bewahren.
+                </p>	
+                
+                <p>
+                    
+                    <p><h3>Erste Ideen und Umsetzung</h3>
+                    <div class = "content">
+                    <div class = "dosen">
+                    <img class = "flaschen" src ="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten11.png" alt="">
+                    <img class = "flaschen" src ="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten%2020.png" alt="">
+                    </p>
+                    </div>
+                    <aside id= "aside-1">
+                    
+                    In unserer Vierergruppe entschieden wir uns dazu, kleine Häuser (etwa 10 bis 20cm groß) aus unterschiedlichen Verpackungen zu bauen und diese mit der LED-Lichterkette zum Leuchten zu bringen. <br>Unser Konzept sah vor, zwei gegenüberstehende Häuserreihen mit jeweils einer  Lichterkette und einem Arduino-Board zu bauen, sodass der Betrachter durch die Straßen der Stadt gehen kann. Durch einen Bewegungsmelder an je einem Ende der Reihe, sollte eine Kettenreaktion ausgelöst werden und die einzelnen Gebäude nacheinander von innen beleuchten. <br>Als Grundlage für unsere „Müllstadt“ sammelten wir Teepackungen, Eierkartons, leere Dosen, Flaschen und andere Papier- oder Plastikverpackungen mit dem richtigen Maßstab. <br>Im nächsten Schritt wurden die Häuser zu mehreren Blöcken zusammengeklebt und mit blauer Farbe angesprüht. Um effizienter arbeiten zu können, teilten wir die Arbeit zwischen der Programmierung und der Gestaltung auf. Mit einem Cuttermesser schnitten Sarah und ich kleine viereckige Fenster aus, was wesentlich länger dauerte und komplizierter war als gedacht. Währenddessen machten sich Maggie und Maddy mit der Technik vertraut. 
+                    </p>
+                
+                </aside>
+                </div>
+            </p>	
+
+
+                <p>
+                    <h3>Die Elektronik</h3>
+                    Gemeinsam verkabelten wir die LED-Kette und der PIR-Bewegungssensor mit dem Arduino-Board. Herausfordernd war dabei, zu verstehen, wo welches Kabel in welchen Pin gesetzt werden musste. <br>Auch das Zusammenlöten der Kabel an die Elektroplatte oder den Sensor gestaltete sich teilweise sehr schwierig. Einige Kabel fielen nach dem Löten wieder ab und ließen sich nicht wieder anbringen. Die Lösung des Problems: mehr Hitze und ein neuer, sauberer Lötaufsatz. <br>Nachdem die elektronische Schaltung vollendet war, wurde sie für die zweite Häuserreihe dupliziert. 
+                </p>
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten3.png" alt="">
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten12.png" alt="">
+                
+
+                    <p>
+                    <h3>Der Code</h3>
+                    Bei den ersten Zeilen handelt es sich um Definitionen. So werden die 30 LEDs am Pin 3 des Boards angeschlossen, wobei die Helligkeit der Lämpchen das Maximum von 255 betragen. Außerdem wird der LED-Typ beschrieben und die Farbkonstellationen definiert. <br>Der Term <code>CRGB leds [NUM_LEDS]</code> steht für ein Array, in der die LEDs gespeichert werden. Der Sensor ist auf Pin 2 zugeschaltet und übermittelt den Zustand <code>(pirState) „LOW“</code>. Das heißt, dass gerade keine Bewegung erkannt wurde. <br>Durch <code>val</code> wird dieser Zustand gespeichert. <br>Das <code>void setup()</code>startet die Kommunikation zwischen dem Arduino und dem Sensor, wobei Informationen, wie beispielsweise die Übertragungsgeschwindigkeit (9600) festgelegt werden. Des Weiteren werden Infos über die LED-Art, die verwendeten Pins und die Farb-Reihenfolge an die FastLED-Bibliothek weitergeleitet. <br>Als nächstes folgt die „void loop“-Funktion. Hier zeigt die Funktion entweder <Code>pirState == LOW</Code> oder <code>val == HIGH</code> an. Ändert sich der Zustand von LOW auf HIGH, wurde eine Bewegung auf dem Bewegungssensor erkannt und das folgende Lichtmuster wird abgespielt: Nacheinander laufen alle LEDs durch, wobei jede dritte Lampe blau und die anderen rot aufleuchten. Dies regelt der Ausdruck <code>leds[i] = (i % 3 == 2) ? CRGB (0, 0, 255) : CRGB (255, 0, 0)</code>. <br>Durch <code>delay(700)</code> leuchten die Lampen nacheinander auf. Wenn keine Bewegung mehr registriert wird, wird die Lichterkette mit einer Verzögerung von 2,5 Sekunden wieder dunkel. Der pirState wird auf „LOW“ gesetzt und der Kreislauf beginnt von vorne, wenn eine Bewegung erkannt wird. 
+                    <br>
+                    </p>
+                    <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten30.png" alt="">
+                    </p>
+                    <div class = "code">
+                            <button id="button2"> 
+                                <a href="../physical_computing/blinkenlichten.html">Hier klicken für Code</a>
+                            </button>
+                    </div>
+                
+            
+                
+                
+                    <h3>Fertigstellung und Reflektion</h3>
+                    Sobald der Code fertig geschrieben war und die Elektrik funktionierte, starteten wir einen Testlauf und brachten die Arduino-Boards in den Häusern unter. <br>Die Sensoren wurden auf ein Dach am Anfang der jeweiligen Häuserreihe gesetzt und die Technik wurde im Inneren versteckt. <br>Da wir unglücklicherweise die Häuserteile schon zu Beginn aneinandergeklebt hatten, hatten wir Probleme die Lichterkette durch die Häuser zu ziehen. Deswegen schnitten wir als Verbindung kleine Durchgänge in die Wände der Häuser. <br>Dennoch wurden wir rechtzeitig fertig und die kleine Stadt fügt sich sehr gut in die anderen Projekte ein. 
+                    <p>
+                        <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten4.png" alt="">
+                    </p>
+                    Die Aufgabe war definitiv eine Herausforderung, vor allem wegen dem Zusammenspiel von Programmieren, elektrotechnischem Handwerken und sinnvollem Gestalten. <br>Beim nächsten Mal würden wir als Gruppe jedoch einige Dinge anders machen: Zum einen logisch planen, was wir wann machen, um Fehler zu minimieren und somit schneller und einfacher ans Ziel zu kommen. Zum anderen könnte man den Code erweitern, indem man die Lampen nacheinander ausgehen lässt. Eine weitere Kleinigkeit, die ich persönlich nicht bedacht hatte, ist, dass sich das blaue und rote Licht vermischt, da jedes Haus mehrere LEDs beherbergt. Dadurch entstehen Farben wie Pink oder Violett, was der alptraumhaften Grundidee wiederspricht. <br>Wenn mehr Budget und mehr Zeit vorhanden wären, würde ich  den Maßstab der Stadt vergrößern, mehr Häuser bauen und in jedem einen Bewegungssensor einsetzen. Die Häuser würden nur aufleuchten, wenn der Betrachter genau vor ihnen steht. <p></p>Alles in allem war es ein tolles Gruppenprojekt und jede Idee hat die gruselige Stimmung des Szenarios wiedergespiegelt, was auch gezeigt hat, wie gut der Kurs als Team arbeiten kann.</p> </p>
+
+                    <p>
+                    <div class = "code">
+                        <button id="button2"> 
+                            <a href="../physical_computing/video.html">Hier klicken für Videos</a>
+                        </button>
+                    </div>
+                    </p>
+
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten9.png" alt="">
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten10.png" alt="">
+                <img src="https://hbk-bs.github.io/the-archives-Johanna2612/assets/images/blinkenlichten.png" alt="">
+            
+        </div>
+        <p>
+            <footer>Johanna Rohe | Grundlagen der digitalen Kommunikation | WS 24/25</footer>
+        </p>
+    </body>
+</html>

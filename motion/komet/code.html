@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<title>{the archive}</title>
+        <link rel="stylesheet" href="../../style.css">
+	</head>
+	<body>
+
+    <h3>Code "komet"</h3>
+    <div class="text-code">
+
+        <pre>
+            <code>
+
+            let x=0;
+            let y=0;
+            let radius = 50;
+            let speed = 1;
+                
+            function setup(){
+                const canvas = createCanvas(500, 500);
+                canvas.parent("sketch");
+                  
+                y = height / 2;
+                x = -radius;
+                strokeWeight(0.3);
+                fill("hsl(39, 100%, 50%)");
+            }
+                
+            function draw() {
+                background(173, 216, 230, 20);
+                circle(x, y, radius);
+                speed *= 1.0;
+                x += speed;
+                if (x > width + radius) {
+                x = -radius; 
+                speed = 1;
+                }
+            }
+            </code>
+        </pre>
+    </div>
+
+    <p>
+        <button id="button2"><a href="../../motion/komet/index.html">⬅︎ zurück</a>
+        </button>
+    </p>
+
+    <p>
+    <footer>Johanna Rohe | Grundlagen der digitalen Kommunikation | WS 24/25</footer>
+    </p>
+</body>
+</html>

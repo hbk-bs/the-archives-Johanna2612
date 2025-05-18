@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<title>{the archive}</title>
+        <link rel="stylesheet" href="../../style.css">
+	</head>
+	<body>
+
+    <h3>Code "upward"</h3>
+    <div class="text-code">
+
+        <pre>
+            <code>
+                
+            let x=0;
+            let y=500;
+            let radius = 80;
+            let speed = 10;
+
+            function setup(){
+            const canvas = createCanvas(500, 500);
+            canvas.parent("sketch");
+                
+                
+            y = height;
+            x = width / 2;
+            strokeWeight(0.8);
+            fill("hsl(39, 100%, 50%)");
+                
+            }
+
+            function draw() {
+            background("hsl(195, 53%, 79%)");
+            circle(x, y, radius);
+            speed *= 1.0;
+            y -= speed;
+            if (y < -radius) {
+            y= height; 
+            speed = 1.5;
+            }
+            }
+            </code>
+        </pre>
+    </div>
+
+    <p>
+        <button id="button2"><a href="../../motion/upward/index.html">⬅︎ zurück</a>
+        </button>
+    </p>
+
+    <p>
+    <footer>Johanna Rohe | Grundlagen der digitalen Kommunikation | WS 24/25</footer>
+    </p>
+</body>
+</html>
